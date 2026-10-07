@@ -96,12 +96,13 @@ export default function Navbar() {
         </nav>
       </header>
 
-      {/* Menú móvil a pantalla completa */}
-      <div
-        id="menu-movil"
-        hidden={!open}
-        className="fixed inset-0 z-40 flex flex-col justify-center bg-cream px-8 pt-20 lg:hidden"
-      >
+  {/* Menú móvil a pantalla completa */}
+<div
+  id="menu-movil"
+  className={`fixed inset-0 z-40 flex-col justify-center bg-cream px-8 pt-20 lg:hidden ${
+    open ? 'flex' : 'hidden'
+  }`}
+>
         <ul className="space-y-1">
           {links.map((l) => (
             <li key={l.href}>
